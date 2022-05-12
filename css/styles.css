@@ -32,15 +32,8 @@ body {
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-
-  outline: solid 2px tomato;
-}
-.box {
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
-  margin-bottom: 0;
+  padding-right: 15px;
+  padding-left: 15px;
 
   outline: solid 2px tomato;
 }
@@ -48,6 +41,9 @@ body {
 /* logo */
 
 .header {
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   /* background-color: aqua; */
 }
 
@@ -73,6 +69,15 @@ body {
 
 .link {
   text-decoration: none;
+}
+.ul {
+  margin: 0;
+  padding: 0;
+}
+
+.img {
+  margin: 0;
+  padding: 0;
 }
 
 /* navigation */
@@ -118,6 +123,8 @@ body {
 /* team */
 
 .team {
+  padding-top: 94px;
+  padding-bottom: 94px;
   background-color: #f5f4fa;
 }
 .team-title {
@@ -130,9 +137,7 @@ body {
   letter-spacing: 0.03em;
 
   margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 68px;
-  padding-bottom: 50px;
+  margin-bottom: 50px;
 }
 .team-item {
   color: var(--title-color);
@@ -161,7 +166,8 @@ body {
 /* hero */
 .hero {
   margin-top: 0;
-  margin-bottom: 94px;
+  margin-bottom: 0;
+  padding-bottom: 94px;
 
   outline: solid 2px tomato;
 }
@@ -196,6 +202,8 @@ body {
   cursor: pointer;
   margin-top: 0;
   margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
 
   border-radius: 4px;
   border-color: transparent;
@@ -205,6 +213,8 @@ body {
 /* footer */
 
 .footer {
+  margin-top: 0;
+  margin-bottom: 0;
   padding-bottom: 60px;
 
   background: #2f303a;
@@ -244,7 +254,8 @@ body {
 /* skills */
 .skills {
   margin-top: 0;
-  margin-bottom: 94px;
+  margin-bottom: 0;
+  padding-bottom: 94px;
   /* background-color: yellow; */
 }
 
@@ -313,14 +324,15 @@ body {
 /* work */
 .work {
   margin-top: 0;
-  margin-bottom: 120px;
+  margin-bottom: 0;
+  padding-bottom: 94px;
 
   /* background-color: #93db85; */
 }
 
 .work-title {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 50px;
 
   color: var(--title-color);
 
@@ -334,11 +346,18 @@ body {
 /* address */
 
 .place {
+  display: inline-block;
   margin-top: 0;
   margin-bottom: 9px;
   color: #ffffff;
 }
 
 .adds {
+  margin: 0;
+  padding: 0;
   font-style: inherit;
+}
+.tel {
+  margin-top: 0;
+  margin-bottom: 0;
 }
