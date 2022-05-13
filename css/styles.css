@@ -38,7 +38,7 @@ body {
   outline: solid 2px tomato;
 }
 
-/* logo */
+/* header */
 
 .header {
   padding-top: 32px;
@@ -46,6 +46,8 @@ body {
 
   /* background-color: aqua; */
 }
+
+/* logo */
 
 .header-logo {
   color: var(--accent-color);
@@ -80,20 +82,39 @@ body {
   padding: 0;
 }
 
+/* main-nav */
+.main-nav {
+  display: flex;
+
+  background-color: yellow;
+}
+
 /* navigation */
 
 .navigation {
   margin-top: 0;
   margin-bottom: 0;
 }
+.site-nav {
+  display: flex;
+}
 
+.site-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
 .nav-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--title-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+
+  outline: solid 1px tomato;
 }
 .nav-link:hover,
 .nav-link:focus {
@@ -105,14 +126,25 @@ body {
 }
 
 /* call */
+.call {
+  display: flex;
+}
+.call .item + .item {
+  margin-left: 50px;
+}
 
 .call-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
   color: var(--text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.02em;
   text-decoration: none;
+
+  outline: solid 1px tomato;
 }
 
 .call-link:hover,
@@ -283,6 +315,10 @@ body {
 }
 
 /* button */
+.button {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 
 .btn-item {
   color: var(--title-color);
