@@ -35,7 +35,31 @@ body {
   padding-right: 15px;
   padding-left: 15px;
 
-  outline: solid 2px tomato;
+  /* outline: solid 2px tomato; */
+}
+
+.list {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.link {
+  /* display: block; */
+  text-decoration: none;
+}
+.ul {
+  margin: 0;
+  padding: 0;
+}
+
+.img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
 }
 
 /* header */
@@ -43,13 +67,14 @@ body {
 .header {
   padding-top: 32px;
   padding-bottom: 32px;
-
-  /* background-color: aqua; */
+  border-bottom: 2px solid #ececec;
 }
 
 /* logo */
 
 .header-logo {
+  display: flex;
+
   color: var(--accent-color);
   font-family: var(--secondary-font);
   font-weight: 700;
@@ -62,31 +87,22 @@ body {
 .header-logo-part {
   color: #000000;
 }
-.list {
-  list-style: none;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding: 0;
-}
-
-.link {
-  text-decoration: none;
-}
-.ul {
-  margin: 0;
-  padding: 0;
-}
-
-.img {
-  margin: 0;
-  padding: 0;
-}
 
 /* main-nav */
 .main-nav {
   display: flex;
+  align-items: center;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+}
 
-  background-color: yellow;
+/* header-nav */
+.header-nav {
+  display: flex;
+  align-items: center;
 }
 
 /* navigation */
@@ -97,6 +113,7 @@ body {
 }
 .site-nav {
   display: flex;
+  margin-left: 93px;
 }
 
 .site-nav .item:not(:last-child) {
@@ -113,8 +130,6 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
-
-  outline: solid 1px tomato;
 }
 .nav-link:hover,
 .nav-link:focus {
@@ -128,6 +143,8 @@ body {
 /* call */
 .call {
   display: flex;
+
+  justify-content: end;
 }
 .call .item + .item {
   margin-left: 50px;
@@ -143,8 +160,6 @@ body {
   line-height: 16px;
   letter-spacing: 0.02em;
   text-decoration: none;
-
-  outline: solid 1px tomato;
 }
 
 .call-link:hover,
@@ -154,7 +169,7 @@ body {
 
 /* team */
 
-.team {
+.group {
   padding-top: 94px;
   padding-bottom: 94px;
   background-color: #f5f4fa;
@@ -171,7 +186,16 @@ body {
   margin-top: 0;
   margin-bottom: 50px;
 }
-.team-item {
+
+.team {
+  display: flex;
+}
+
+.team .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.team-items {
   color: var(--title-color);
 
   font-weight: 500;
@@ -179,7 +203,7 @@ body {
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
-  margin-top: 0;
+  margin-top: 30px;
   margin-bottom: 10px;
 }
 .team-text {
@@ -192,14 +216,13 @@ body {
   letter-spacing: 0.03em;
 
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 30px;
 }
 
 /* hero */
 .hero {
   margin-top: 0;
   margin-bottom: 0;
-  padding-bottom: 94px;
 
   background-color: #2f303a;
 }
@@ -283,12 +306,26 @@ body {
   color: var(--accent-color);
 }
 
-/* skills */
-.skills {
+/* qualities */
+.qualities {
   margin-top: 0;
   margin-bottom: 0;
+  padding-top: 94px;
   padding-bottom: 94px;
-  /* background-color: yellow; */
+}
+
+/* skills */
+
+.skills {
+  display: flex;
+}
+
+/* .skills .item {
+  margin-right: 30px;
+} */
+
+.skills .item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .skills-title {
@@ -319,6 +356,11 @@ body {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+.btn {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 34px;
+}
 
 .btn-item {
   color: var(--title-color);
@@ -335,7 +377,7 @@ body {
 
   border-radius: 4px;
   border-color: transparent;
-  padding: 6px 32px;
+  padding: 6px 22px;
   min-width: 145px;
 }
 
@@ -346,12 +388,31 @@ body {
 
   border-radius: 4px;
   border-color: transparent;
-  padding: 6px 32px;
+  padding: 6px 22px;
   min-width: 145px;
 }
 
-/* exemples */
+/* portfolio */
 
+/* exemples */
+.examples {
+  display: flex;
+  flex-wrap: wrap;
+
+  /* background-color: teal; */
+}
+.examples .item {
+  width: 370px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #eeeeee;
+}
+.examples .item:nth-child(3n) {
+  margin-right: 0;
+}
+.examples .item:nth-child(-n + 3) {
+  margin-bottom: 0;
+}
 .examples-title {
   color: var(--title-color);
   font-weight: 700;
@@ -374,12 +435,20 @@ body {
 }
 
 /* work */
-.work {
+.working {
   margin-top: 0;
   margin-bottom: 0;
   padding-bottom: 94px;
 
   /* background-color: #93db85; */
+}
+
+.work {
+  display: flex;
+}
+
+.work .item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .work-title {
