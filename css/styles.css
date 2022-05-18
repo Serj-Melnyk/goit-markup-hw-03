@@ -339,9 +339,18 @@ body {
   display: flex;
 }
 
-.skills .item:not(:last-child) {
+.skills .item {
+  width: calc((100% -90px) / 4);
   margin-right: 30px;
 }
+
+.skills .item:last-child {
+  margin-right: 0;
+}
+
+/* .skills .item:not(:last-child) {
+  margin-right: 30px;
+} */
 
 .skills-title {
   margin-top: 0;
